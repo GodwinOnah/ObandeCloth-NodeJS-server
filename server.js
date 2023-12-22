@@ -98,10 +98,9 @@ app.get('/userx/:id',(req,res)=>{//using Id to fetch user
 						res.status(400).json('Not found')
 				}
 		}).catch(err=>res.status(400).json('erro getting user'))
+})
 
-	})
-
-
-app.listen(process.env.PORT||3001,function(){
-console.log(`Sever running at port: ${process.env.PORT}`);
+const DATABASE_URL = process.env.DATABASE_URL
+app.listen(DATABASE_URL||3001,function(){
+console.log(`Sever running at port: ${DATABASE_URL}`);
 });
