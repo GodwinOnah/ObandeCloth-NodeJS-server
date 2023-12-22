@@ -104,6 +104,6 @@ app.get('/userx/:id',(req,res)=>{//using Id to fetch user
 	})
 
 
-app.listen(3001,function(){
-console.log('Sever running at port: 3001');
+app.listen(process.env.PORT||3001,function(){
+console.log(`Sever running at port: ${process.env.PORT}`);
 });
